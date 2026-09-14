@@ -1,5 +1,5 @@
 /**
- * NOIRÉ — Modern Restaurant Website
+ * NEW PEARL — Modern Restaurant Website
  * Production-quality Interactive Engine & Client Demo Controller
  */
 
@@ -297,7 +297,7 @@ window.__initNoireSite = () => {
       description: 'Subcontinental oak-aged spirit infused with wild Konkan kokum, vetiver root (khus) distillate, and Himalayan honey smoked over sal embers.',
       allergens: 'None',
       pairing: 'Signature Dish Companion',
-      origin: 'NOIRÉ Botanical Laboratory'
+      origin: 'NEW PEARL Botanical Laboratory'
     },
     {
       id: 'bev-02',
@@ -380,7 +380,7 @@ window.__initNoireSite = () => {
       title: 'Architectural Evening Facade',
       category: 'space',
       image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80',
-      caption: 'The secluded sanctuary situated among Bengaluru’s heritage rain tree canopy.'
+      caption: 'The secluded sanctuary situated among Purnia’s heritage rain tree canopy.'
     },
     {
       id: 'gal-8',
@@ -1254,9 +1254,9 @@ window.__initNoireSite = () => {
         'VERSION:2.0',
         'PRODID:-//NOIRE Restaurant//Table Booking Demo//EN',
         'BEGIN:VEVENT',
-        'SUMMARY:Dinner at NOIRÉ Contemporary Indian',
-        'DESCRIPTION:Table reservation demo at NOIRÉ - 42 Lavelle Boulevard, Bengaluru.',
-        'LOCATION:42 Lavelle Boulevard, Richmond Enclave, Bengaluru, Karnataka 560001',
+        'SUMMARY:Dinner at NEW PEARL Contemporary Indian',
+        'DESCRIPTION:Table reservation demo at NEW PEARL - Opposite Ford Co, PWD Colony, Purnia.',
+        'LOCATION:Opposite Ford Co, PWD Colony, Purnia, Bihar 854301',
         'STATUS:CONFIRMED',
         'END:VEVENT',
         'END:VCALENDAR'
@@ -1285,17 +1285,17 @@ window.__initNoireSite = () => {
     const currentHour = now.getHours();
     const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
 
-    if (currentDay === 1) {
+    if (false) {
       // Monday Closed
-      headerStatusText.textContent = 'Closed Mondays • Research Atelier';
+      headerStatusText.textContent = 'Kitchen Open • 11 AM – 11 PM';
       if (headerStatusPill) headerStatusPill.querySelector('.status-dot').style.background = '#e53935';
-    } else if (currentHour >= 12 && currentHour < 23) {
+    } else if (currentHour >= 11 && currentHour < 23) {
       // Open
-      headerStatusText.textContent = 'Kitchen Open • 12 PM – 11 PM';
+      headerStatusText.textContent = 'Kitchen Open • 11 AM – 11 PM';
       if (headerStatusPill) headerStatusPill.querySelector('.status-dot').style.background = '#4caf50';
     } else {
       // Closed for the night
-      headerStatusText.textContent = 'Opens Today at 12:00 PM';
+      headerStatusText.textContent = 'Opens Today at 11:00 AM';
       if (headerStatusPill) headerStatusPill.querySelector('.status-dot').style.background = '#ffa000';
     }
   }
