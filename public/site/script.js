@@ -10,6 +10,34 @@ window.__initNoireSite = () => {
   // 1. Data Store: Contemporary Indian Tasting Menu
   // --------------------------------------------------------------------------
   const MENU_DATA = [
+    {
+      id: 'pop-01',
+      name: 'Chicken Lollipop',
+      category: 'starters',
+      priceINR: 260,
+      diet: 'non-veg',
+      isChefPick: true,
+      spiceLevel: 3,
+      image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=800&q=80',
+      description: 'Our most-ordered plate. Frenched chicken winglets marinated in ginger, garlic and red chilli, fried crisp and tossed in a house schezwan glaze.',
+      allergens: 'Soy, Gluten',
+      pairing: 'Chilled lime soda or draught lager',
+      origin: 'House favourite at New Pearl, Purnia'
+    },
+    {
+      id: 'pop-02',
+      name: 'Chicken Tikka Butter Masala (6 pcs)',
+      category: 'mains',
+      priceINR: 380,
+      diet: 'non-veg',
+      isChefPick: true,
+      spiceLevel: 2,
+      image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80',
+      description: 'Tandoor-charred chicken tikka simmered in a silky tomato, cashew and butter gravy, finished with cream and crushed fenugreek.',
+      allergens: 'Dairy, Nuts',
+      pairing: 'Butter naan or jeera rice',
+      origin: 'North Indian classic, Purnia style'
+    },
     // Starters / Small Plates
     {
       id: 'str-01',
