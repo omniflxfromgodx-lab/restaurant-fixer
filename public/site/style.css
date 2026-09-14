@@ -3497,3 +3497,38 @@ h1, h2, h3, h4 {
     scroll-behavior: auto !important;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Header layout fixes (longer brand name / status text)
+   -------------------------------------------------------------------------- */
+.brand-logo .logo-text {
+  white-space: nowrap;
+  letter-spacing: 0.14em;
+  font-size: clamp(1.05rem, 1.5vw, 1.4rem);
+}
+.brand-logo .logo-tag {
+  white-space: nowrap;
+}
+.header-container {
+  gap: 1rem;
+}
+.nav-links > li > a,
+.nav-link {
+  white-space: nowrap;
+}
+.header-status-pill,
+.header-status-pill span,
+.header-actions .btn,
+.header-actions .btn span,
+.header-cart-btn,
+.header-reserve-btn {
+  white-space: nowrap;
+}
+@media (max-width: 1180px) and (min-width: 1024px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .brand-logo .logo-tag {
+    display: none;
+  }
+}
