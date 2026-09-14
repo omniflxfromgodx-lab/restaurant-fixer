@@ -4,6 +4,8 @@
  */
 
 window.__initNoireSite = () => {
+  if (window.__noireSiteBooted) return;
+  window.__noireSiteBooted = true;
   'use strict';
 
   // --------------------------------------------------------------------------
@@ -1506,4 +1508,4 @@ window.__initNoireSite = () => {
   // Periodic hours check
   setInterval(updateOperatingStatus, 60000);
 };
-if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", window.__initNoireSite); } else { window.__initNoireSite(); }
+if (document.querySelector(".site-header")) { window.__initNoireSite(); } else { document.addEventListener("DOMContentLoaded", window.__initNoireSite); }
