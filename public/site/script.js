@@ -1508,4 +1508,4 @@ window.__initNoireSite = () => {
   // Periodic hours check
   setInterval(updateOperatingStatus, 60000);
 };
-if (document.querySelector(".site-header")) { window.__initNoireSite(); } else { document.addEventListener("DOMContentLoaded", window.__initNoireSite); }
+
