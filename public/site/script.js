@@ -3,7 +3,7 @@
  * Production-quality Interactive Engine & Client Demo Controller
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+window.__initNoireSite = () => {
   'use strict';
 
   // --------------------------------------------------------------------------
@@ -1477,4 +1477,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Periodic hours check
   setInterval(updateOperatingStatus, 60000);
-});
+};
+if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", window.__initNoireSite); } else { window.__initNoireSite(); }
