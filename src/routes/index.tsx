@@ -34,7 +34,6 @@ export const Route = createFileRoute("/")({
       },
       { rel: "stylesheet", href: "/site/style.css" },
     ],
-    scripts: [{ src: "/site/script.js", defer: true }],
   }),
   component: Index,
 });
@@ -42,8 +41,12 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     document.body.setAttribute("data-theme-accent", "olive");
-    const init = (window as unknown as { __initNoireSite?: () => void }).__initNoireSite;
-    if (init) init();
+    const script = document.createElement("script");
+    script.src = "/site/script.js";
+    script.onload = () => {
+      (window as unknown as { __initNoireSite?: () => void }).__initNoireSite?.();
+    };
+    document.body.appendChild(script);
     return () => {
       document.body.removeAttribute("data-theme-accent");
     };
